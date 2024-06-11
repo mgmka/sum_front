@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+const ip = Astro.clientAddress;
 //import { inject } from "@vercel/analytics";
 //inject();
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<div>Your IP address is: <span class="address">{ ip }</span></div>
 		<h1>The current URL is: {Astro.url}</h1>
 		<h1>The current URL pathname is: {Astro.url.pathname}</h1>
 		<h1>The current URL origin is: {Astro.url.origin}</h1>
