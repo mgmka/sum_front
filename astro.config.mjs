@@ -5,12 +5,16 @@ import vercel from '@astrojs/vercel/serverless';
 //inject();
 import zeabur from '@zeabur/astro-adapter/serverless';
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
-    adapter: zeabur(),
-    //adapter: cloudflare(),
-    //outDir: './dist'
-    //output: 'server',
-    //adapter: vercel(),
+  output: 'server',
+  adapter: zeabur()
+  //adapter: cloudflare(),
+  //outDir: './dist'
+  //output: 'server',
+  //adapter: vercel(),
+  ,
+  integrations: [tailwind()]
 });
